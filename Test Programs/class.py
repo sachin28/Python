@@ -6,13 +6,13 @@ class Info(object):
         self.address = address
 
     def name_print(self):
-        print self.name
+        print (self.name)
 
     def age_print(self):
-        print self.age
+        print (self.age)
 
     def address_print(self):
-        print self.address
+        print (self.address)
 
 class ChildInfo(Info):
 
@@ -27,7 +27,7 @@ class ChildInfo(Info):
 
     def school_print(self):
 
-        print self.school
+        print (self.school)
 
 
 a = Info("Sachin", "25", "SanJose")

@@ -4,4 +4,4 @@ spl = str.split()
 
 spl.reverse()
 
-print " ".join(spl)
+print (" ".join(spl))
