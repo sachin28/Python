@@ -2,7 +2,7 @@ import random
 
 name = raw_input("Please Enter Your Name: ")
 
-guessCount = 0
+guessCount = 1
 randomNumber = random.randint(1, 10)
 # print(randomNumber)
 
@@ -28,7 +28,7 @@ while guessCount < 10:
         else:
             print("something went wrong")
 
-    guessCount = guessCount + 1
+    guessCount +=  1
 
 if guessedNumber == randomNumber:
     print("you guessed correct numer in " + str(guessCount) + " trial/s")
