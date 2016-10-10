@@ -5,3 +5,4 @@ strReplace1 = str.lower().replace("to", "**")
 
 print (strReplace)
 print (strReplace1)
+###
