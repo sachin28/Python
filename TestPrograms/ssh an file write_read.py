@@ -1,23 +1,42 @@
 import paramiko
 
+host = raw_input("Enter host: ")
+user = raw_input("Enter user: ")
+password = raw_input('Enter the password of ' +str(host) +' user ' +str(user) +': ')
 
-l_password = "#password"
-l_host = "#ip"
-l_user = "#user eg root"
-ssh = paramiko.SSHClient()
-ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-ssh.connect(l_host, username=l_user, password=l_password)
-transport = ssh.get_transport()
-session = transport.open_session()
-session.set_combine_stderr(True)
-session.get_pty()
-#for testing purposes we want to force sudo to always to ask for password. because of that we use "-k" key
-session.exec_command("ls -l")
-stdin = session.makefile('wb', -1)
-stdout = session.makefile('rb', -1)
-#you have to check if you really need to send password here
-stdin.write(l_password +'\n')
-stdin.flush()
-for line in stdout.read().splitlines():
-    print 'host: %s: %s' % (l_host, line)
-    
+def connection():
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    ssh.connect(host, username=user, password=password)
+    return ssh
+
+def command(ssh):
+    transport = ssh.get_transport()
+    session = transport.open_session()
+    session.set_combine_stderr(True)
+    session.get_pty()
+
+    #taking the command to be executed at run time
+    comm = raw_input("\nInput the command to be executed: ")
+    session.exec_command(comm)
+    stdin = session.makefile('wb', -1)
+    stdout = session.makefile('rb', -1)
+    print stdout.read()
+
+    #with open('SampleWrite.txt', 'w') as w:
+        #w.write(stdout.read())
+    # print (stdout.read())    why cant we call it again
+    stdin.flush()
+
+#write contents of the command from server to local machine and close the connection
+if __name__ == '__main__':
+    ssh = connection()
+    feedback = 'y'
+    while feedback.lower() == 'y':
+        c = command(ssh)
+        feedback = raw_input("Do you want other command to be executed (y/n): ")
+    else:
+        ssh.close()
+
+
+
