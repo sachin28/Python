@@ -1,4 +1,4 @@
-## Ref: Geeks for Geeks
+
 
 class Node:
     def __init__(self, data):
