@@ -1,14 +1,15 @@
+val = int(raw_input("Enter the number to get fib: "))
+def fibo(val):
 
-def fib_iterative(n):
-
-
-    a, b = 0, 1
-    while n > 0:
-        a, b = b, a + b
-        n -= 1
-    return a
-
-n = int(raw_input()) - 1
-print  fib_iterative(n)
+    if val == 0:
+        return 1
+    elif val == 1 or val == 2:
+        return 1
 
 
+
+    return fibo(val-1)+fibo(val-2)
+
+
+
+print 'Requested Fibo is {}'.format(fibo(val))
