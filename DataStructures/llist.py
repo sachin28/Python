@@ -51,7 +51,6 @@ if __name__ == '__main__':
         llist.delete(3)
 
 
-
     llist.printlist()
 
 
