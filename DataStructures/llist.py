@@ -11,7 +11,7 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
-    def inset(self, value):
+    def insert(self, value):
         if self.head is None:
             new_node = Node(value)
             self.head = new_node
@@ -23,6 +23,14 @@ class LinkedList:
                 temp_node = temp_node.next
 
             temp_node.next = new_node
+
+    def delete(self, value):
+        del_node = Node(value)
+        temp_node = self.head
+        while(temp_node != value):
+            temp_node = temp_node.next
+        else:
+            temp_node = self.head.next
 
     def printlist(self):
         temp = self.head
@@ -39,7 +47,8 @@ if __name__ == '__main__':
 
     llist = LinkedList()
     for num in range(0, 5):
-        llist.inset(value=num)
+        llist.insert(value=num)
+        llist.delete(3)
 
 
 
