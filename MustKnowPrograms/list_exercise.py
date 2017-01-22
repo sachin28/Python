@@ -29,6 +29,6 @@ for value in enumerate(elements):
 
      print a
      print b
-     
+
 
 

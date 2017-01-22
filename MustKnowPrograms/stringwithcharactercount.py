@@ -1,6 +1,6 @@
 givenString = 'aaabbccccddccffddd'
 
-# expected o/p 'a3b2....'
+# expected o/p 'a3 b2....'
 
 
 
@@ -17,7 +17,7 @@ for char in givenString:
     elif char == prev_char:
         count = count + 1
     else:
-        print prev_char + str(count)
+        print prev_char + str(count),
         prev_char = char
         count = 1
 

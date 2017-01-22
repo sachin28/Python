@@ -6,5 +6,5 @@ for n in range(1,100):
         odd.append(n)
         count = count + 1
 print odd
-print count
+print 'number of odds: {}' .format(count)
 
