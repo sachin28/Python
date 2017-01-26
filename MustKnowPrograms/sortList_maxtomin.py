@@ -15,6 +15,5 @@ while unsorted_list:
 
 print sorted_list
 
-
 #print sorted_list[k-1]   #for kth largest value
 
