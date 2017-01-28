@@ -11,10 +11,10 @@ print name
 
 
 dic = {}
-i=0
+i = 0
 
 for eachname in name:
     dic[eachname] = ages[i]
-    i+=1
+    i += 1
 
-print  dic
+print dic

@@ -2,7 +2,8 @@ import paramiko
 
 host = raw_input("Enter host: ")
 user = raw_input("Enter user: ")
-password = raw_input('Enter the password of ' +str(host) +' user ' +str(user) +': ')
+password = raw_input('Enter the password of ' + str(host) + ' user ' + str(user) + ': ')
+
 
 def connection():
     ssh = paramiko.SSHClient()
@@ -10,13 +11,14 @@ def connection():
     ssh.connect(host, username=user, password=password)
     return ssh
 
+
 def command(ssh):
     transport = ssh.get_transport()
     session = transport.open_session()
     session.set_combine_stderr(True)
     session.get_pty()
 
-    #taking the command to be executed at run time
+    # taking the command to be executed at run time
     comm = raw_input("\nInput the command to be executed: ")
     session.exec_command(comm)
     stdin = session.makefile('wb', -1)
