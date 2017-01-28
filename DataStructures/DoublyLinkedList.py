@@ -1,26 +1,32 @@
 class Node:
     def __init__(self, data):
         self.next = None
+        self.prev = None
         self.data = data
 
 
 class LinkedList:
     def __init__(self):
         self.head = None
+        self.tail = None
 
     def insert(self, data):
         if self.head is None:
 
             new_node = Node(data)
             self.head = new_node
+            self.tail = new_node
 
         else:
 
             new_node = Node(data)
-            temp_node = self.head
-            while (temp_node.next != None):
-                temp_node = temp_node.next
-            temp_node.next = new_node
+            new_node.prev = self.tail
+            new_node.next = None
+            self.tail.next = new_node
+            self.tail = new_node
+
+
+'''
 
     def insert_at_k(self, data, pos):
 
@@ -57,21 +63,13 @@ class LinkedList:
         if data == self.head.data:
             counter = 1
 
-    def reverse(self):
-        tail = None
-
-        while (self.head != None):
-            temp_node = self.head
-            self.head = temp_node.next
-            temp_node.next = tail
-            tail = temp_node
-        self.head = tail
-
     def print_list(self):
+
         temp_node = self.head
-        while (temp_node):
-            print temp_node.data
-            temp_node = temp_node.next
+        while(temp_node):
+          print temp_node.data
+          temp_node = temp_node.next
+
 
     def del_list(self, data):
         temp_node = self.head
@@ -96,31 +94,10 @@ class LinkedList:
 
         return False
 
+'''
 
-llist = LinkedList()
-# llist.insert(0)
-# list.insert(3)
-# llist.insert(5)
-# llist.print_list()
-# llist.del_list(5)
-# llist.print_list()
-llist.insert(1)
-llist.print_list()
-print ''
-llist.insert_atstart(2)
-llist.print_list()
-print ''
-llist.insert(3)
-llist.print_list()
-print ''
-
-llist.insert_at_k(5, 2)
-llist.print_list()
-
-print ''
-llist.insert_at_k(6, 5)
-llist.print_list()
-
-print ''
-llist.reverse()
-llist.print_list()
+if __name__ == '__main__':
+    llist = LinkedList()
+    llist.insert(0)
+    llist.insert(1)
+    llist.print_list()
