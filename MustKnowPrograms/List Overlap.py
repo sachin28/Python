@@ -10,7 +10,7 @@ for number in a:
 print list
 '''
 
-a = [1,1,2,2,3,4,5,5]
+a = [1, 1, 2, 2, 3, 4, 5, 5]
 
 list = []
 
@@ -18,5 +18,3 @@ for number in a:
     if number not in list:
         list.append(number)
 print list
-
-

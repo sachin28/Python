@@ -1,6 +1,6 @@
 inpstr = raw_input("Enter string input: ")
 
-revstr= []
+revstr = []
 
 for i in inpstr:
     if i.isupper():

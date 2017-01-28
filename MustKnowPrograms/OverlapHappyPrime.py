@@ -6,15 +6,13 @@ while line:
 
     line = prime.readline()
 
-
 happylist = []
-happy= open('happylist.txt')
+happy = open('happylist.txt')
 line = happy.readline()
 while line:
     happylist.append(int(line))
 
     line = happy.readline()
-
 
 intersectionlist = []
 for intlst in primelist:

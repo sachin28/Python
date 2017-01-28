@@ -4,14 +4,11 @@ m = int(raw_input())
 count = 1
 while count:
     input = raw_input()
-    print bool(re.match(r'^[+-.]?[0-9]*\.[0-9]+$',input))
+    print bool(re.match(r'^[+-.]?[0-9]*\.[0-9]+$', input))
     count += 1
 
-
-
-
-#check for integer
-#for this input
+# check for integer
+# for this input
 
 '''
 4

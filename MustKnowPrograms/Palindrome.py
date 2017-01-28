@@ -9,5 +9,3 @@ elif word != revword:
 
 else:
     print ("Something went wrong")
-
-

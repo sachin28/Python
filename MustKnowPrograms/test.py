@@ -1,4 +1,4 @@
-#to ip address
+# to ip address
 # Table
 # 00:18:0A => 6
 # 88:15:44 => 1
@@ -21,7 +21,6 @@ mac_addresses = [
     "00:18:0A:5B:0C:10",
     "E0:55:3D:2D:02:23"
 ]
-
 
 for mac_address in mac_addresses:
     temp_list = mac_address.split(":")

@@ -1,6 +1,5 @@
 class Info(object):
     def __init__(self, name, age, address):
-
         self.name = name
         self.age = age
         self.address = address
@@ -14,19 +13,16 @@ class Info(object):
     def address_print(self):
         print (self.address)
 
+
 class ChildInfo(Info):
-
     def __init__(self, name, age, address, school):
-
         self.school = school
         super(ChildInfo, self).__init__(name, age, address)
 
-   # def doubleAge(self):
-       # print 2*int(self.age)
-
+        # def doubleAge(self):
+        # print 2*int(self.age)
 
     def school_print(self):
-
         print (self.school)
 
 
@@ -36,5 +32,4 @@ b = ChildInfo("Sandeep", "22", "Pune", "PCCOE")
 a.age_print()
 b.name_print()
 b.school_print()
-#b.school()
-
+# b.school()

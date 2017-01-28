@@ -4,7 +4,6 @@ for value in elements:
     print value
 print ""
 
-
 for value in elements[::-1]:
     print value
 print ""
@@ -25,10 +24,7 @@ for value in enumerate(elements):
 print ""
 
 for value in enumerate(elements):
-     a, b = value
+    a, b = value
 
-     print a
-     print b
-
-
-
+    print a
+    print b

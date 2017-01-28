@@ -3,7 +3,7 @@ import pymysql
 password = raw_input("input password of the db: ")
 
 try:
-    db = pymysql.connect("localhost","root",password,"test" )
+    db = pymysql.connect("localhost", "root", password, "test")
 
     # prepare a cursor object using cursor() method
     cursor = db.cursor()
@@ -19,6 +19,3 @@ try:
 
 except:
     print "Wrong Password"
-
-
-

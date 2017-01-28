@@ -9,7 +9,6 @@ name = re.findall(r'[A-Z][a-z]*', given_string)
 print ages
 print name
 
-
 dic = {}
 i = 0
 

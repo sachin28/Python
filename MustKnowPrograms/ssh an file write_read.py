@@ -25,12 +25,13 @@ def command(ssh):
     stdout = session.makefile('rb', -1)
     print stdout.read()
 
-    #with open('SampleWrite.txt', 'w') as w:
-        #w.write(stdout.read())
+    # with open('SampleWrite.txt', 'w') as w:
+    # w.write(stdout.read())
     # print (stdout.read())    why cant we call it again
     stdin.flush()
 
-#write contents of the command from server to local machine and close the connection
+
+# write contents of the command from server to local machine and close the connection
 if __name__ == '__main__':
     ssh = connection()
     feedback = 'y'
@@ -39,6 +40,3 @@ if __name__ == '__main__':
         feedback = raw_input("Do you want other command to be executed (y/n): ")
     else:
         ssh.close()
-
-
-

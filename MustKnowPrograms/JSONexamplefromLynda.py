@@ -1,7 +1,7 @@
-#Not my work: Referrd from Joe's Lynda.com material
+# Not my work: Referrd from Joe's Lynda.com material
 
-import urllib2
 import json
+import urllib2
 
 
 def printResults(data):

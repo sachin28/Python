@@ -2,8 +2,6 @@ file = open('names.txt')
 line = file.readline()
 count_list = {}
 
-
-
 while line:
 
     line = line.strip()
@@ -14,13 +12,4 @@ while line:
 
     line = file.readline()
 
-
-
 print count_list
-
-
-
-
-
-
-

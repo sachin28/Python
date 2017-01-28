@@ -28,7 +28,7 @@ while guessCount < 10:
         else:
             print("something went wrong")
 
-    guessCount +=  1
+    guessCount += 1
 
 if guessedNumber == randomNumber:
     print("you guessed correct numer in " + str(guessCount) + " trial/s")

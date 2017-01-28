@@ -1,6 +1,6 @@
 def prime():
     'checking prime for 9 numbers'
-    for i in range (10):
+    for i in range(10):
         if i:
             number = abs(int(raw_input("\r\nInsert any number to check its primarility: ")))
 
@@ -9,7 +9,7 @@ def prime():
 
             else:
                 flag = 0
-                for x in range(2,(number/2)+1):
+                for x in range(2, (number / 2) + 1):
                     if number % x == 0:
                         flag = 1
                         break
@@ -18,5 +18,6 @@ def prime():
                     print "not a prime"
                 else:
                     print "is a prime"
+
 
 prime()
