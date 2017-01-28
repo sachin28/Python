@@ -28,15 +28,15 @@ class BinaryTree:
                         temp_node = temp_node.left
                     temp_node = temp_node.left
 
-    def print_inorder(self, node=None):
+    def print_inorder(self, node):
         """ Print tree in-order """
-        if node is not None:
+        if node:
             self.print_inorder(node.left)
             print node.data
             self.print_inorder(node.right)
 
 if __name__ == '__main__':
     bt = BinaryTree()
-    for data in [5, 4, 2, 3, 1, 9, 7, 10]:
+    for data in [5, 4, 2, 3, 1, 9, 7, 10, 6, 8]:
         bt.insert(data)
     bt.print_inorder(bt.root)
