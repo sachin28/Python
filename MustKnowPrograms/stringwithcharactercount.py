@@ -2,8 +2,6 @@ givenString = 'aaabbccccddccffddd'
 
 # expected o/p 'a3 b2....'
 
-
-
 str_count = len(givenString)
 count = None
 prev_char = None
