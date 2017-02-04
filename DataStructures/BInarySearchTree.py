@@ -28,6 +28,20 @@ class BinaryTree:
                         temp_node = temp_node.left
                     temp_node = temp_node.left
 
+    def min_node(self):
+        """ Print min value """
+        temp_node = self.root
+        while temp_node.left != None:
+            temp_node = temp_node.left
+        print "minimum node {}".format(temp_node.data)
+
+    def max_node(self):
+        """ Print max value """
+        temp_node = self.root
+        while temp_node.right != None:
+            temp_node = temp_node.right
+        print "maximum node {}".format(temp_node.data)
+
     def print_inorder(self, node):
         """ Print tree in-order """
         if node:
@@ -37,6 +51,8 @@ class BinaryTree:
 
 if __name__ == '__main__':
     bt = BinaryTree()
-    for data in [5, 4, 2, 3, 1, 9, 7, 10, 6, 8]:
+    for data in [5, 4, 2, 3, 9, 7, 10, 6, 8]:
         bt.insert(data)
     bt.print_inorder(bt.root)
+    bt.min_node()
+    bt.max_node()
