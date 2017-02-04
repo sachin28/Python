@@ -10,6 +10,7 @@ class BinaryTree:
         self.root = None
 
     def insert(self, data):
+        """ Insert a node """
         new_node = Node(data)
 
         if self.root is None:
@@ -42,6 +43,23 @@ class BinaryTree:
             temp_node = temp_node.right
         print "maximum node {}".format(temp_node.data)
 
+    def search(self, value):
+        """ search for a node """
+        temp = self.root
+        found = False
+        while (temp != None and found is False):
+            if value == temp.data:
+                found = True
+            elif (value > temp.data):
+                temp = temp.right
+            elif (value <= temp.data):
+                temp = temp.left
+
+        if found:
+            print "{} is in the tree".format(value)
+        else:
+            print "{} is not in the tree".format(value)
+
     def print_inorder(self, node):
         """ Print tree in-order """
         if node:
@@ -56,3 +74,7 @@ if __name__ == '__main__':
     bt.print_inorder(bt.root)
     bt.min_node()
     bt.max_node()
+    bt.search(2)
+    bt.search(10)
+    bt.search(0)
+    bt.search(5)
