@@ -1,0 +1,5 @@
+vm1 shutdown
+vm2 poweron
+vm3 halt
+vm1 poweron
+vm3 shutdown

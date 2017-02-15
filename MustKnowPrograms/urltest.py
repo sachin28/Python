@@ -5,7 +5,7 @@ import urllib2
 
 def main():
     webUrl = urllib2.urlopen("https://google.com")
-    print "result: " + str(webUrl.getcode())
+    print "result: {} ".format(webUrl.getcode())  # + str(webUrl.getcode())
 
     data = webUrl.read()
     print data

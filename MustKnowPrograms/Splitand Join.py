@@ -1,6 +1,6 @@
 str = raw_input()
 
-str = str.split(" ")
+str = str.split()
 print  str
 
 str = "-".join(str)

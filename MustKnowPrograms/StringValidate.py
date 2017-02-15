@@ -1,5 +1,6 @@
 import connector
-from m
+
+# from m
 
 cnx = connector.connect(user='scott', password='tiger',
                         host='127.0.0.1',
