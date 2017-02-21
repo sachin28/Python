@@ -1,23 +1,34 @@
-givenString = 'aaabbccccddccffddd'
+def char_count(string):
+    prev_char = None
+    total_count = 0
+    str_len = len(string)
+    count = 0
+    result = ""
 
-# expected o/p 'a3 b2....'
+    for char in string:
 
-str_count = len(givenString)
-count = None
-prev_char = None
+        total_count += 1
 
-total_count = 0
-for char in givenString:
-    total_count += 1
-    if prev_char is None:
-        prev_char = char
-        count = 1
-    elif char == prev_char:
-        count = count + 1
-    else:
-        print prev_char + str(count),
-        prev_char = char
-        count = 1
+        if prev_char == None:
+            prev_char = char
+            count = 1
 
-    if total_count == str_count:
-        print prev_char + str(count)
+        elif prev_char == char:
+            count += 1
+
+        else:
+            result = "{}{}{}".format(result, prev_char, count)
+            prev_char = char
+            count = 1
+
+        if str_len == total_count:
+            result = "{}{}{}".format(result, prev_char, count)
+
+    return result
+
+
+if __name__ == "__main__":
+    string = "aaabcclllooppp"
+    print char_count(string)
+    
+    # expected a3b1c2l3o2p3
