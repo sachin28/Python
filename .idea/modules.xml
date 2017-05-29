@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../7.8_inyo/.idea/7.8_inyo.iml" filepath="$PROJECT_DIR$/../7.8_inyo/.idea/7.8_inyo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/PycharmProjects.iml" filepath="$PROJECT_DIR$/../.idea/PycharmProjects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PythonSachin.iml" filepath="$PROJECT_DIR$/.idea/PythonSachin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ex_bat_mauna_loa/.idea/ex_bat_mauna_loa.iml" filepath="$PROJECT_DIR$/../ex_bat_mauna_loa/.idea/ex_bat_mauna_loa.iml" />
+    </modules>
+  </component>
+</project>
