@@ -7,3 +7,5 @@ for number in a:
     if number in b:
         list.append(number)
 print list
+
+
